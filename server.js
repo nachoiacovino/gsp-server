@@ -16,7 +16,7 @@ app.post("/login", (req, res) => {
     const email = req.body.email
     const password = req.body.password
 
-    const token = jwt.sign({ email }, "supersecret", { expiresIn: 300 })
+    const token = jwt.sign({ email }, "supersecret", { expiresIn: "1hr" })
     
     if (email && password) {
         if (email === "contacts@app.com" && password === "password") res.send({ status: "success", token })
