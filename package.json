@@ -15,5 +15,19 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "nodemon": "^2.0.2"
-  }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "200.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+      },
+      "methods": [
+        "OPTIONS"
+      ]
+    }
+  ]
 }
